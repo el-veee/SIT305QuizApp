@@ -2,8 +2,7 @@ package com.lachlanvass.sit305quizapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import android.widget.ToggleButton
+import android.widget.*
 
 class QuizQuestionOne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,16 +18,25 @@ class QuizQuestionOne : AppCompatActivity() {
             getString(R.string.question1_right_answer)
         )
 
-        val questionTitle = findViewById<TextView>(R.id.question_title)
-        val questionDetails = findViewById<TextView>(R.id.question_details)
+        val submitButton = findViewById<Button>(R.id.submit_1)
 
-        val answerButton1 = findViewById<ToggleButton>(R.id.question_1_wrong_answer_button_1)
+        submitButton.setOnClickListener {
 
-        answerButton1.text = questionOne.wrongAnswer1
+            val wrongAnswer1 = findViewById<RadioButton>(R.id.question_1_wrong_answer_button_1)
+            val wrongAnswer2 = findViewById<RadioButton>(R.id.question_1_wrong_answer_button_2)
+            val rightAnswer = findViewById<RadioButton>(R.id.question_1_right_answer_button)
 
-        questionTitle.text = questionOne.questionTitle
-        questionDetails.text = questionOne.questionDetails
+            val answerRadioGroup = findViewById<RadioGroup>(R.id.question_1_radio_group)
 
+            val selectedAnswer = findViewById<RadioButton>(answerRadioGroup.checkedRadioButtonId)
+            val selectedAnswerText = selectedAnswer.text
+
+            if (selectedAnswer.equals(questionOne.rightAnswer)) {
+
+                submitButton.text = "YOU WIN!!"
+            }
+
+        }
 
     }
 }
