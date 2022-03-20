@@ -3,6 +3,7 @@ package com.lachlanvass.sit305quizapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.core.view.forEach
 
 class QuizQuestionOne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +39,10 @@ class QuizQuestionOne : AppCompatActivity() {
                 selectedAnswer.setBackgroundColor(resources.getColor(R.color.red))
             }
 
+            answerRadioGroup.forEach {
+
+                it.isClickable = false
+            }
         }
 
     }
