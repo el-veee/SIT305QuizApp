@@ -3,4 +3,11 @@
     <string name="name_prompt">Enter Your Name</string>
     <string name="start_button">Start</string>
     <string name="user_name" />
+
+    <!-- Question 1 -->
+    <string name="question1_title">What Operating System are you using?</string>
+    <string name="question1_description">"There are many handheld operating systems in the world</string>
+    <string name="question1_wrong_answer_1">IOS</string>
+    <string name="question1_wrong_answer_2">Windows</string>
+    <string name="question1_right_answer">Android</string>
 </resources>
