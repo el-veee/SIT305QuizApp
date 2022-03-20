@@ -23,11 +23,15 @@ class QuizQuestionOne : AppCompatActivity() {
 
         submitButton.setOnClickListener {
 
+
             val wrongAnswer1 = findViewById<RadioButton>(R.id.question_1_wrong_answer_button_1)
             val wrongAnswer2 = findViewById<RadioButton>(R.id.question_1_wrong_answer_button_2)
             val rightAnswer = findViewById<RadioButton>(R.id.question_1_right_answer_button)
 
             val answerRadioGroup = findViewById<RadioGroup>(R.id.question_1_radio_group)
+
+            // Do nothing if no button is checked
+            if (answerRadioGroup.checkedRadioButtonId == -1) {return@setOnClickListener}
 
             val selectedAnswer = findViewById<RadioButton>(answerRadioGroup.checkedRadioButtonId)
             val selectedAnswerText = selectedAnswer.text
