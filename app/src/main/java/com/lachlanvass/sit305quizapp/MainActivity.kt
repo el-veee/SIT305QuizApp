@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
-
     lateinit var appData:AppData
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,18 +17,12 @@ class MainActivity : AppCompatActivity() {
 
 
         startButton.setOnClickListener {
-
             val userName = findViewById<EditText>(R.id.name_input)
-
             val userNameText = userName.text.toString()
 
-            this.appData = AppData(
-                userName = userNameText,
-                totalScore = 0,
-                questionNumber = 0
-            )
-
             val questionOneIntent = Intent(this, QuizQuestionOne::class.java)
+
+            passAppDataToIntent(questionOneIntent, userNameText, 0, 0)
 
             startActivity(questionOneIntent)
         }
