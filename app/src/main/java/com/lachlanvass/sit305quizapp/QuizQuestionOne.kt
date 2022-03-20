@@ -31,9 +31,11 @@ class QuizQuestionOne : AppCompatActivity() {
             val selectedAnswer = findViewById<RadioButton>(answerRadioGroup.checkedRadioButtonId)
             val selectedAnswerText = selectedAnswer.text
 
-            if (selectedAnswer.equals(questionOne.rightAnswer)) {
+            rightAnswer.setBackgroundColor(resources.getColor(R.color.teal_200))
 
-                submitButton.text = "YOU WIN!!"
+            if (!selectedAnswerText.equals(questionOne.rightAnswer)) {
+
+                selectedAnswer.setBackgroundColor(resources.getColor(R.color.red))
             }
 
         }
