@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizQuestionFour">
-
-
+    tools:context=".QuizQuestionFive">
 
     <TextView
         android:id="@+id/question_welcome"
@@ -32,7 +30,7 @@
         android:layout_marginEnd="185dp"
         android:layout_marginBottom="357dp"
         android:max="5"
-        android:progress="4"
+        android:progress="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,7 +59,7 @@
         android:layout_marginTop="142dp"
         android:layout_marginEnd="395dp"
         android:layout_marginBottom="570dp"
-        android:text="@string/question3_description"
+        android:text="@string/question5_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -70,7 +68,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <RadioGroup
-        android:id="@+id/question_4_radio_group"
+        android:id="@+id/question_5_radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
@@ -85,26 +83,26 @@
         app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
-            android:id="@+id/question_4_wrong_answer_button_1"
+            android:id="@+id/question_5_wrong_answer_button_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question3_wrong_answer_1" />
+            android:text="@string/question5_wrong_answer_1" />
 
         <RadioButton
-            android:id="@+id/question_4_right_answer_button"
+            android:id="@+id/question_5_right_answer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question4_right_answer" />
+            android:text="@string/question5_right_answer" />
 
         <RadioButton
-            android:id="@+id/question_3_wrong_answer_button_2"
+            android:id="@+id/question_5_wrong_answer_button_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question4_wrong_answer_2" />
+            android:text="@string/question3_wrong_answer_2" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/submit_4"
+        android:id="@+id/submit_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
@@ -118,7 +116,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/question_4_next_button"
+        android:id="@+id/question_5_next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="142dp"

@@ -34,4 +34,12 @@
     <string name="question4_wrong_answer_2">String</string>
     <string name="question4_right_answer">Queue</string>
 
+
+    <!-- Question 5 -->
+    <string name="question5_title">What is Kotlin\'s version of the Switch operator?</string>
+    <string name="question5_description">It provides simpler if/else functionality</string>
+    <string name="question5_wrong_answer_1">switch</string>
+    <string name="question5_wrong_answer_2">where</string>
+    <string name="question5_right_answer">with</string>
+
 </resources>
