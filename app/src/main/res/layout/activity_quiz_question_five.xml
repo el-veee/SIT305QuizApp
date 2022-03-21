@@ -98,7 +98,7 @@
             android:id="@+id/question_5_wrong_answer_button_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/question3_wrong_answer_2" />
+            android:text="@string/question5_wrong_answer_2" />
     </RadioGroup>
 
     <Button
