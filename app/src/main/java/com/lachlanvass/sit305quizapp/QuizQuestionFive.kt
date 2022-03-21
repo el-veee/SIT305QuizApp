@@ -66,12 +66,12 @@ class QuizQuestionFive : AppCompatActivity() {
         }
 
         nextButton.setOnClickListener {
-//
-//            val questionFiveIntent = Intent(this, QuizQuestionFive::class.java)
-//
-//            passAppDataToIntent(questionFiveIntent, userName!!, totalScore)
-//
-//            startActivity(questionFiveIntent)
+
+            val conclusionActivity = Intent(this, Conclusion::class.java)
+
+            passAppDataToIntent(conclusionActivity, userName!!, totalScore)
+
+            startActivity(conclusionActivity)
 
         }
     }

@@ -5,6 +5,7 @@
     <string name="button_submit">Submit</string>
     <string name="button_next">Next</string>
     <string name="user_name" />
+    <string name="score_text">Your Score:</string>
 
     <!-- Question 1 -->
     <string name="question1_title">What Operating System are you using?</string>
