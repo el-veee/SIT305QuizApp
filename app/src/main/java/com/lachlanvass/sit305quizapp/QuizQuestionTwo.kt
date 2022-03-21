@@ -13,7 +13,7 @@ import androidx.core.view.forEach
 class QuizQuestionTwo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_question_one)
+        setContentView(R.layout.activity_quiz_question_two)
 
         val userName = intent.getStringExtra("USER_NAME")
         var totalScore = intent.getIntExtra("TOTAL_SCORE", 0)
@@ -36,8 +36,6 @@ class QuizQuestionTwo : AppCompatActivity() {
         submitButton.setOnClickListener {
 
 
-            val wrongAnswer1 = findViewById<RadioButton>(R.id.question_2_wrong_answer_button_1)
-            val wrongAnswer2 = findViewById<RadioButton>(R.id.question_2_wrong_answer_button_2)
             val rightAnswer = findViewById<RadioButton>(R.id.question_2_right_answer_button)
 
             val answerRadioGroup = findViewById<RadioGroup>(R.id.question_2_radio_group)
