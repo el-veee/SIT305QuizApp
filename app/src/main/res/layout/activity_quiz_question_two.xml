@@ -40,17 +40,15 @@
         android:id="@+id/question_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginEnd="395dp"
-        android:layout_marginBottom="619dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="223dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/question2_title"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/question_details"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/question_2_progress_bar" />
 
     <TextView
         android:id="@+id/question_details"
