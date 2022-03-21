@@ -12,4 +12,12 @@
     <string name="question1_wrong_answer_1">IOS</string>
     <string name="question1_wrong_answer_2">Windows</string>
     <string name="question1_right_answer">Android</string>
+
+    <!-- Question 2 -->
+    <string name="question2_title">Where is Deakin University?</string>
+    <string name="question2_description">What country is it located?</string>
+    <string name="question2_wrong_answer_1">Japan</string>
+    <string name="question2_wrong_answer_2">New Zealand</string>
+    <string name="question2_right_answer">Australia</string>
+
 </resources>

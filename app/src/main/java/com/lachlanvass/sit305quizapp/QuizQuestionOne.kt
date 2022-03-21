@@ -15,7 +15,7 @@ class QuizQuestionOne : AppCompatActivity() {
         val userName = intent.getStringExtra("USER_NAME")
         var totalScore = intent.getIntExtra("TOTAL_SCORE", 0)
 
-        val welcomeMessage = findViewById<TextView>(R.id.question_1_welcome)
+        val welcomeMessage = findViewById<TextView>(R.id.question_welcome)
         welcomeMessage.text = "Welcome $userName !"
 
         val questionOne = Question(
