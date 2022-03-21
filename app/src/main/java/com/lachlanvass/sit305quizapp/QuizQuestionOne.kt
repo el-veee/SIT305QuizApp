@@ -1,7 +1,9 @@
 package com.lachlanvass.sit305quizapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.core.view.forEach
 
@@ -9,6 +11,12 @@ class QuizQuestionOne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question_one)
+
+        val userName = intent.getStringExtra("USER_NAME")
+        var totalScore = intent.getIntExtra("TOTAL_SCORE", 0)
+
+        val welcomeMessage = findViewById<TextView>(R.id.question_1_welcome)
+        welcomeMessage.text = "Welcome $userName !"
 
         val questionOne = Question(
 
@@ -20,6 +28,7 @@ class QuizQuestionOne : AppCompatActivity() {
         )
 
         val submitButton = findViewById<Button>(R.id.submit_1)
+        val nextButton = findViewById<Button>(R.id.question_1_next_button)
 
         submitButton.setOnClickListener {
 
@@ -41,12 +50,28 @@ class QuizQuestionOne : AppCompatActivity() {
             if (!selectedAnswerText.equals(questionOne.rightAnswer)) {
 
                 selectedAnswer.setBackgroundColor(resources.getColor(R.color.red))
+            } else {
+
+                totalScore++
             }
 
             answerRadioGroup.forEach {
 
                 it.isClickable = false
             }
+
+            nextButton.visibility = View.VISIBLE
+            submitButton.visibility = View.INVISIBLE
+        }
+
+        nextButton.setOnClickListener {
+
+            val questionTwoIntent = Intent(this, QuizQuestionTwo::class.java)
+
+            passAppDataToIntent(questionTwoIntent, userName!!, totalScore)
+
+            startActivity(questionTwoIntent)
+
         }
 
     }

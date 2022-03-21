@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
             val questionOneIntent = Intent(this, QuizQuestionOne::class.java)
 
-            passAppDataToIntent(questionOneIntent, userNameText, 0, 0)
+            passAppDataToIntent(questionOneIntent, userNameText, 0)
 
             startActivity(questionOneIntent)
         }
