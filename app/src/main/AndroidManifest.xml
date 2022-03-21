@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SIT305QuizApp">
         <activity
+            android:name=".QuizQuestionFour"
+            android:exported="false" />
+        <activity
+            android:name=".QuizQuestionThree"
+            android:exported="false" />
+        <activity
             android:name=".QuizQuestionTwo"
             android:exported="false" />
         <activity

@@ -10,10 +10,11 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.core.view.forEach
 
-class QuizQuestionTwo : AppCompatActivity() {
+class QuizQuestionThree : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_question_two)
+        setContentView(R.layout.activity_quiz_question_three)
+
 
         val userName = intent.getStringExtra("USER_NAME")
         var totalScore = intent.getIntExtra("TOTAL_SCORE", 0)
@@ -23,22 +24,22 @@ class QuizQuestionTwo : AppCompatActivity() {
 
         val questionOne = Question(
 
-            getString(R.string.question2_title),
-            getString(R.string.question2_description),
-            getString(R.string.question2_wrong_answer_1),
-            getString(R.string.question2_wrong_answer_2),
-            getString(R.string.question2_right_answer)
+            getString(R.string.question3_title),
+            getString(R.string.question3_description),
+            getString(R.string.question3_wrong_answer_1),
+            getString(R.string.question3_wrong_answer_2),
+            getString(R.string.question3_right_answer)
         )
 
-        val submitButton = findViewById<Button>(R.id.submit_2)
-        val nextButton = findViewById<Button>(R.id.question_2_next_button)
+        val submitButton = findViewById<Button>(R.id.submit_3)
+        val nextButton = findViewById<Button>(R.id.question_3_next_button)
 
         submitButton.setOnClickListener {
 
 
-            val rightAnswer = findViewById<RadioButton>(R.id.question_2_right_answer_button)
+            val rightAnswer = findViewById<RadioButton>(R.id.question_3_right_answer_button)
 
-            val answerRadioGroup = findViewById<RadioGroup>(R.id.question_2_radio_group)
+            val answerRadioGroup = findViewById<RadioGroup>(R.id.question_3_radio_group)
 
             // Do nothing if no button is checked
             if (answerRadioGroup.checkedRadioButtonId == -1) {return@setOnClickListener}
@@ -67,11 +68,11 @@ class QuizQuestionTwo : AppCompatActivity() {
 
         nextButton.setOnClickListener {
 
-            val questionThreeIntent = Intent(this, QuizQuestionThree::class.java)
-
-            passAppDataToIntent(questionThreeIntent, userName!!, totalScore)
-
-            startActivity(questionThreeIntent)
+//            val questionThreeIntent = Intent(this, QuizQuestionThree::class.java)
+//
+//            passAppDataToIntent(questionThreeIntent, userName!!, totalScore)
+//
+//            startActivity(questionThreeIntent)
 
         }
     }
